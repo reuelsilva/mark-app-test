@@ -1,0 +1,92 @@
+{
+  "info": {
+    "name": "Mark L by QAx",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "New task",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"name\": \"Comprar ketchup\",\n\t\"is_done\": true\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/tasks",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3333",
+          "path": ["tasks"]
+        }
+      }
+    },
+    {
+      "name": "Task list",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/tasks",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3333",
+          "path": ["tasks"]
+        }
+      }
+    },
+    {
+      "name": "Update task",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n\t\"is_done\": false\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3333/tasks/8b161cff-5485-4a06-aaa3-5cde44d34es",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3333",
+          "path": ["tasks", "8b161cff-5485-4a06-aaa3-5cde44d34es"]
+        }
+      }
+    },
+    {
+      "name": "Remove task",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/tasks/dd90cf90-a3f3-4dbf-af12-66e666ac9012",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3333",
+          "path": ["tasks", "dd90cf90-a3f3-4dbf-af12-66e666ac9012"]
+        }
+      }
+    }
+  ]
+}
