@@ -38,7 +38,9 @@ jobs:
           npm start &
 
       - name: Wait for services
-        run: npx wait-on http://localhost:3333 http://localhost:8080
+        run: |
+          until curl -s http://localhost:3333; do sleep 2; done
+          until curl -s http://localhost:8080; do sleep 2; done
 
       - name: Run E2E tests
         env:
