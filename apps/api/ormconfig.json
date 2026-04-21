@@ -1,0 +1,10 @@
+{
+  "type": "sqljs",
+  "autoSave": true,
+  "location": "./src/database/database.sqlite",
+  "migrations": ["./src/database/migrations/**.js"],
+  "entities": ["./src/models/**.js"],
+  "cli": {
+    "migrationsDir": "./src/database/migrations"
+  }
+}
